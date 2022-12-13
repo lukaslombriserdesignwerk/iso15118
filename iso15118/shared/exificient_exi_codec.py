@@ -22,7 +22,7 @@ class ExificientEXICodec(IEXICodec):
         self.gateway = JavaGateway.launch_gateway(
             classpath=JAR_FILE_PATH,
             die_on_exit=False,
-            javaopts=["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+            # javaopts=["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
         )
 
         self.exi_codec = self.gateway.jvm.com.siemens.ct.exi.main.cmd.EXICodec()
